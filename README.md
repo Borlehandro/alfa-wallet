@@ -1,2 +1,2 @@
-# alfa-wallet
-AlphaWallet project for Alpha mobile hackathon
+# Alfa Wallet
+AlfaWallet project for Alfa Bank mobile hackathon
