@@ -1,13 +1,14 @@
-# Alfa Wallet
-AlfaWallet project for Alfa Bank mobile hackathon
+# AlfaWallet
+<img src="https://github.com/Borlehandro/alfa-wallet/blob/master/mobile/AlfaWallet/AlfaWallet/Assets.xcassets/AppIcon.appiconset/1024.png" alt="Logo" align="left" width="200"/>
+AlfaWallet это проект, написанная в рамках Мобильного Хакатона от Альфа-Банка.
 
-- [Repository](#1-repository-structure)
-    - [Backend](#backend)
-    - [Mobile](#mobile)
-- [Documentation](#documentation)
+## Структура 
+[Проект состоит из следующих частей:](#1-repository-structure) [Backend](#backend) и [Мобильное приложение для iOS](#mobile)
+ <br />
+ <br />
+ <br />
+ <br />
 
-## 1. Repository structure
-    Репозиторий содержит два проекта. Первый это бэкенд приложения. Второй это мобильное приложение под IOS.
 ### Backend
     Включает серверную часть проекта (Spring framework with gradle builder).
     Использует базу данных postgreSQL.
