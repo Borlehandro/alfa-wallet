@@ -1,13 +1,13 @@
-# Alfa Wallet
-AlfaWallet project for Alfa Bank mobile hackathon
+# AlfaWallet
+AlfaWallet это проект, написанная в рамках Мобильного Хакатона от Альфа-Банка.
 
-- [Repo](#1-repository-structure)
-    - [Backend](#backend)
-    - [Mobile](#mobile)
-
-## 1. Repository structure
-The repository contains two projects. The first is the backend of our application. The second is a mobile application for IOS
+## Структура 
+[Проект состоит из следующих частей:](#1-repository-structure)
+   - [Backend](#backend)
+   - [Мобильное приложение для iOS](#mobile)
+ 
 ### Backend
 backend folder con
+
 ### Mobile
 Mobile info
