@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CardDto {
+    private String id;
     private String name;
     private String barcode;
-    private String category;
+    private Boolean hidden;
 }

@@ -1,5 +1,6 @@
 package com.alfawallet.backend.domain.service;
 
+import com.alfawallet.backend.domain.data.FullCardInfo;
 import com.alfawallet.backend.dto.CardDto;
 import com.alfawallet.backend.dto.UserDataDto;
 import com.alfawallet.backend.model.data.UserData;
@@ -38,7 +39,7 @@ public class CardService {
             return List.of();
         } else {
             var user = userOpt.get();
-            List<YandexApiFeatureDto> features = new ArrayList<>();
+            List<FullCardInfo> cardsFullInfo = new ArrayList<>();
             user.getCards().forEach((card) -> {
                 var nearestFeature = yandexApiManager.searchByLocationAndCardName(
                         card.getName(),
@@ -56,21 +57,31 @@ public class CardService {
                         )
 
                 );
-                nearestFeature.ifPresent(features::add);
+                nearestFeature.ifPresent(yandexApiFeatureDto -> cardsFullInfo.add(
+                        new FullCardInfo(
+                                yandexApiFeatureDto,
+                                new CardDto(
+                                        card.getId().toString(),
+                                        card.getName(),
+                                        card.getCode(),
+                                        card.getHidden()
+                                )
+                        )
+                ));
             });
-            return features.stream()
+            return cardsFullInfo.stream()
                     .sorted(
                             Comparator.comparingDouble(
                                     (item) ->
                                             distanceSquare(
                                                     Double.valueOf(latitude),
-                                                    Double.valueOf(item.getGeometry().getCoordinates().get(0)),
+                                                    Double.valueOf(item.getFeature().getGeometry().getCoordinates().get(0)),
                                                     Double.valueOf(longitude),
-                                                    Double.valueOf(item.getGeometry().getCoordinates().get(1))
+                                                    Double.valueOf(item.getFeature().getGeometry().getCoordinates().get(1))
                                             )
                             )
                     )
-                    .map((it) -> new CardDto())
+                    .map(FullCardInfo::getCard)
                     .toList();
         }
     }
