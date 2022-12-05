@@ -19,9 +19,10 @@ AlfaWallet это проект, написанная в рамках Мобил�
     Подключение библиотек: CocoaPods.
     Фреймворки: SnapKit, RxSwift, Moya.
 ##### Флоу мобильного приложения
+<img src="https://github.com/Borlehandro/alfa-wallet/blob/master/recources/flow.png?raw=true" alt="Logo" align="center" width="1024"/>
 
 
-## Documentation
+## Документация 
 С документацией проекта можно ознакомиться по следующим ссылкам: 
 1. [API documentation on Swagger](https://app.swaggerhub.com/apis/AALEKSANDROV2/AlfaWalletApi/1.0)
 2. [Проект на Figma](https://www.figma.com/file/wtyunZcskHFG7kD1eDyG7r/Alfa-Wallet?node-id=28%3A461&t=VgnNwv82pEiDMB9l-1)
