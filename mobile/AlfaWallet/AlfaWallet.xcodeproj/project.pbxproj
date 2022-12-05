@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEE4A403282111A3C46ABF59 /* Pods_AlfaWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D04F8F05668D47A7A166783 /* Pods_AlfaWallet.framework */; };
+		F0071699293A320500914B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0071698293A320500914B9E /* AppDelegate.swift */; };
+		F007169B293A320500914B9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007169A293A320500914B9E /* SceneDelegate.swift */; };
+		F007169D293A320500914B9E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007169C293A320500914B9E /* MainViewController.swift */; };
+		F00716A2293A320700914B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00716A1293A320700914B9E /* Assets.xcassets */; };
+		F00716A5293A320700914B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00716A3293A320700914B9E /* LaunchScreen.storyboard */; };
+		F05677E9293CCF6C0085C428 /* HiddenCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677E8293CCF6B0085C428 /* HiddenCardsViewController.swift */; };
+		F05677EB293CCF7A0085C428 /* HiddenCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677EA293CCF7A0085C428 /* HiddenCardsViewModel.swift */; };
+		F05677ED293CCFC30085C428 /* HiddenCardsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677EC293CCFC30085C428 /* HiddenCardsAssembly.swift */; };
+		F05677EF293CD0F90085C428 /* HiddenCardsSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677EE293CD0F90085C428 /* HiddenCardsSceneDelegate.swift */; };
+		F05677F2293CD4C90085C428 /* CardDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677F1293CD4C90085C428 /* CardDetailsAssembly.swift */; };
+		F05677F4293CD4EC0085C428 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677F3293CD4EC0085C428 /* CardDetailsViewController.swift */; };
+		F05677F6293CD5040085C428 /* CardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677F5293CD5040085C428 /* CardDetailsViewModel.swift */; };
+		F05677F8293CDADE0085C428 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677F7293CDADE0085C428 /* Updatable.swift */; };
+		F094307A293CE16B00CCDD92 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943079293CE16B00CCDD92 /* CardView.swift */; };
+		F094307C293CE24000CCDD92 /* UIImage+Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094307B293CE24000CCDD92 /* UIImage+Barcode.swift */; };
+		F094307F293CE99B00CCDD92 /* UIImage+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094307E293CE99B00CCDD92 /* UIImage+Transparent.swift */; };
+		F0943081293CFE4600CCDD92 /* AlfaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943080293CFE4600CCDD92 /* AlfaTextField.swift */; };
+		F0943084293D028A00CCDD92 /* AddCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943083293D028A00CCDD92 /* AddCardAssembly.swift */; };
+		F0943086293D02D800CCDD92 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943085293D02D800CCDD92 /* AddCardViewController.swift */; };
+		F0943088293D02E400CCDD92 /* AddCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943087293D02E400CCDD92 /* AddCardViewModel.swift */; };
+		F094308B293D04AC00CCDD92 /* NetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094308A293D04AC00CCDD92 /* NetworkUseCase.swift */; };
+		F094308D293D04BB00CCDD92 /* NetworkUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094308C293D04BB00CCDD92 /* NetworkUseCaseImpl.swift */; };
+		F094308F293D053A00CCDD92 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094308E293D053A00CCDD92 /* Location.swift */; };
+		F0943091293D058D00CCDD92 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943090293D058D00CCDD92 /* LocationManager.swift */; };
+		F0943094293D0FCB00CCDD92 /* AddCardSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943093293D0FCB00CCDD92 /* AddCardSceneDelegate.swift */; };
+		F0943098293D14DD00CCDD92 /* CardsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943097293D14DD00CCDD92 /* CardsStorage.swift */; };
+		F094309A293D14E900CCDD92 /* CardsStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943099293D14E900CCDD92 /* CardsStorageImpl.swift */; };
+		F094309C293E1A7F00CCDD92 /* ViewWillAppear+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094309B293E1A7E00CCDD92 /* ViewWillAppear+Rx.swift */; };
+		F09440FD293A4E00002F12F0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09440FC293A4E00002F12F0 /* MainViewModel.swift */; };
+		F0944100293A4E5F002F12F0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09440FF293A4E5F002F12F0 /* ViewModel.swift */; };
+		F0944102293A51DA002F12F0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944101293A51DA002F12F0 /* Card.swift */; };
+		F0944107293A54E2002F12F0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944106293A54E2002F12F0 /* MainCoordinator.swift */; };
+		F0944109293A551A002F12F0 /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944108293A551A002F12F0 /* MainSceneDelegate.swift */; };
+		F094410B293A6CEC002F12F0 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094410A293A6CEC002F12F0 /* MainAssembly.swift */; };
+		F0944110293BABAA002F12F0 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094410F293BABAA002F12F0 /* CardCell.swift */; };
+		F0944112293BBB78002F12F0 /* CardsOverlappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944111293BBB78002F12F0 /* CardsOverlappingLayout.swift */; };
+		F0944114293BC2C3002F12F0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944113293BC2C2002F12F0 /* UIColor+Hex.swift */; };
+		F0944116293BC5B5002F12F0 /* Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944115293BC5B5002F12F0 /* Transparent.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D04F8F05668D47A7A166783 /* Pods_AlfaWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfaWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B722F8B1C0B2B010C8F4A01 /* Pods-AlfaWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaWallet.debug.xcconfig"; path = "Target Support Files/Pods-AlfaWallet/Pods-AlfaWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		7ADB9BA0DAEE2C24E3256755 /* Pods-AlfaWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaWallet.release.xcconfig"; path = "Target Support Files/Pods-AlfaWallet/Pods-AlfaWallet.release.xcconfig"; sourceTree = "<group>"; };
+		F0071695293A320500914B9E /* AlfaWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlfaWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0071698293A320500914B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F007169A293A320500914B9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F007169C293A320500914B9E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F00716A1293A320700914B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F00716A4293A320700914B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F00716A6293A320700914B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05677E8293CCF6B0085C428 /* HiddenCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardsViewController.swift; sourceTree = "<group>"; };
+		F05677EA293CCF7A0085C428 /* HiddenCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardsViewModel.swift; sourceTree = "<group>"; };
+		F05677EC293CCFC30085C428 /* HiddenCardsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardsAssembly.swift; sourceTree = "<group>"; };
+		F05677EE293CD0F90085C428 /* HiddenCardsSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardsSceneDelegate.swift; sourceTree = "<group>"; };
+		F05677F1293CD4C90085C428 /* CardDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsAssembly.swift; sourceTree = "<group>"; };
+		F05677F3293CD4EC0085C428 /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
+		F05677F5293CD5040085C428 /* CardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewModel.swift; sourceTree = "<group>"; };
+		F05677F7293CDADE0085C428 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		F0943079293CE16B00CCDD92 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F094307B293CE24000CCDD92 /* UIImage+Barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Barcode.swift"; sourceTree = "<group>"; };
+		F094307E293CE99B00CCDD92 /* UIImage+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Transparent.swift"; sourceTree = "<group>"; };
+		F0943080293CFE4600CCDD92 /* AlfaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfaTextField.swift; sourceTree = "<group>"; };
+		F0943083293D028A00CCDD92 /* AddCardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardAssembly.swift; sourceTree = "<group>"; };
+		F0943085293D02D800CCDD92 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		F0943087293D02E400CCDD92 /* AddCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewModel.swift; sourceTree = "<group>"; };
+		F094308A293D04AC00CCDD92 /* NetworkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUseCase.swift; sourceTree = "<group>"; };
+		F094308C293D04BB00CCDD92 /* NetworkUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUseCaseImpl.swift; sourceTree = "<group>"; };
+		F094308E293D053A00CCDD92 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F0943090293D058D00CCDD92 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F0943093293D0FCB00CCDD92 /* AddCardSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSceneDelegate.swift; sourceTree = "<group>"; };
+		F0943097293D14DD00CCDD92 /* CardsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStorage.swift; sourceTree = "<group>"; };
+		F0943099293D14E900CCDD92 /* CardsStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStorageImpl.swift; sourceTree = "<group>"; };
+		F094309B293E1A7E00CCDD92 /* ViewWillAppear+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewWillAppear+Rx.swift"; sourceTree = "<group>"; };
+		F09440FC293A4E00002F12F0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		F09440FF293A4E5F002F12F0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F0944101293A51DA002F12F0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F0944106293A54E2002F12F0 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		F0944108293A551A002F12F0 /* MainSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDelegate.swift; sourceTree = "<group>"; };
+		F094410A293A6CEC002F12F0 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		F094410F293BABAA002F12F0 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		F0944111293BBB78002F12F0 /* CardsOverlappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsOverlappingLayout.swift; sourceTree = "<group>"; };
+		F0944113293BC2C2002F12F0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		F0944115293BC5B5002F12F0 /* Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transparent.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0071692293A320500914B9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE4A403282111A3C46ABF59 /* Pods_AlfaWallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5950E2A36D471960D53F80AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D04F8F05668D47A7A166783 /* Pods_AlfaWallet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F007168C293A320500914B9E = {
+			isa = PBXGroup;
+			children = (
+				F0071697293A320500914B9E /* AlfaWallet */,
+				F0071696293A320500914B9E /* Products */,
+				F68DD3FE6AE1055AFCB7CA95 /* Pods */,
+				5950E2A36D471960D53F80AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F0071696293A320500914B9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0071695293A320500914B9E /* AlfaWallet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0071697293A320500914B9E /* AlfaWallet */ = {
+			isa = PBXGroup;
+			children = (
+				F0071698293A320500914B9E /* AppDelegate.swift */,
+				F007169A293A320500914B9E /* SceneDelegate.swift */,
+				F0944106293A54E2002F12F0 /* MainCoordinator.swift */,
+				F0943082293D027100CCDD92 /* AddCard */,
+				F05677F0293CD48F0085C428 /* CardDetails */,
+				F05677E7293CCF0D0085C428 /* HiddenCards */,
+				F00716AC293A344C00914B9E /* Main */,
+				F09440FE293A4E4E002F12F0 /* Core */,
+				F0944105293A527A002F12F0 /* Models */,
+				F094410E293B8AC7002F12F0 /* Extensions */,
+				F05677F9293CDAE80085C428 /* Wrappers */,
+				F0943092293D059100CCDD92 /* Location */,
+				F0943095293D14A800CCDD92 /* UseCases */,
+				F0943096293D14CA00CCDD92 /* CardsStorage */,
+				F00716A3293A320700914B9E /* LaunchScreen.storyboard */,
+				F00716A1293A320700914B9E /* Assets.xcassets */,
+				F00716A6293A320700914B9E /* Info.plist */,
+			);
+			path = AlfaWallet;
+			sourceTree = "<group>";
+		};
+		F00716AC293A344C00914B9E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F094410A293A6CEC002F12F0 /* MainAssembly.swift */,
+				F007169C293A320500914B9E /* MainViewController.swift */,
+				F09440FC293A4E00002F12F0 /* MainViewModel.swift */,
+				F0944108293A551A002F12F0 /* MainSceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F05677E7293CCF0D0085C428 /* HiddenCards */ = {
+			isa = PBXGroup;
+			children = (
+				F05677EC293CCFC30085C428 /* HiddenCardsAssembly.swift */,
+				F05677E8293CCF6B0085C428 /* HiddenCardsViewController.swift */,
+				F05677EA293CCF7A0085C428 /* HiddenCardsViewModel.swift */,
+				F05677EE293CD0F90085C428 /* HiddenCardsSceneDelegate.swift */,
+			);
+			path = HiddenCards;
+			sourceTree = "<group>";
+		};
+		F05677F0293CD48F0085C428 /* CardDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F05677F1293CD4C90085C428 /* CardDetailsAssembly.swift */,
+				F05677F3293CD4EC0085C428 /* CardDetailsViewController.swift */,
+				F05677F5293CD5040085C428 /* CardDetailsViewModel.swift */,
+			);
+			path = CardDetails;
+			sourceTree = "<group>";
+		};
+		F05677F9293CDAE80085C428 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				F0944115293BC5B5002F12F0 /* Transparent.swift */,
+				F05677F7293CDADE0085C428 /* Updatable.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		F0943082293D027100CCDD92 /* AddCard */ = {
+			isa = PBXGroup;
+			children = (
+				F0943083293D028A00CCDD92 /* AddCardAssembly.swift */,
+				F0943085293D02D800CCDD92 /* AddCardViewController.swift */,
+				F0943087293D02E400CCDD92 /* AddCardViewModel.swift */,
+				F0943093293D0FCB00CCDD92 /* AddCardSceneDelegate.swift */,
+			);
+			path = AddCard;
+			sourceTree = "<group>";
+		};
+		F0943089293D049300CCDD92 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F094308A293D04AC00CCDD92 /* NetworkUseCase.swift */,
+				F094308C293D04BB00CCDD92 /* NetworkUseCaseImpl.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F0943092293D059100CCDD92 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				F0943090293D058D00CCDD92 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		F0943095293D14A800CCDD92 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F0943089293D049300CCDD92 /* Network */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F0943096293D14CA00CCDD92 /* CardsStorage */ = {
+			isa = PBXGroup;
+			children = (
+				F0943097293D14DD00CCDD92 /* CardsStorage.swift */,
+				F0943099293D14E900CCDD92 /* CardsStorageImpl.swift */,
+			);
+			path = CardsStorage;
+			sourceTree = "<group>";
+		};
+		F09440FE293A4E4E002F12F0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F0943080293CFE4600CCDD92 /* AlfaTextField.swift */,
+				F0943079293CE16B00CCDD92 /* CardView.swift */,
+				F094410F293BABAA002F12F0 /* CardCell.swift */,
+				F09440FF293A4E5F002F12F0 /* ViewModel.swift */,
+				F0944111293BBB78002F12F0 /* CardsOverlappingLayout.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F0944105293A527A002F12F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0944101293A51DA002F12F0 /* Card.swift */,
+				F094308E293D053A00CCDD92 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F094410E293B8AC7002F12F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0944113293BC2C2002F12F0 /* UIColor+Hex.swift */,
+				F094307B293CE24000CCDD92 /* UIImage+Barcode.swift */,
+				F094307E293CE99B00CCDD92 /* UIImage+Transparent.swift */,
+				F094309B293E1A7E00CCDD92 /* ViewWillAppear+Rx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F68DD3FE6AE1055AFCB7CA95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B722F8B1C0B2B010C8F4A01 /* Pods-AlfaWallet.debug.xcconfig */,
+				7ADB9BA0DAEE2C24E3256755 /* Pods-AlfaWallet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0071694293A320500914B9E /* AlfaWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00716A9293A320700914B9E /* Build configuration list for PBXNativeTarget "AlfaWallet" */;
+			buildPhases = (
+				C55220A4962199ACF8937EC8 /* [CP] Check Pods Manifest.lock */,
+				F0071691293A320500914B9E /* Sources */,
+				F0071692293A320500914B9E /* Frameworks */,
+				F0071693293A320500914B9E /* Resources */,
+				CBE2B13AA76541C4A07D21D6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlfaWallet;
+			productName = AlfaWallet;
+			productReference = F0071695293A320500914B9E /* AlfaWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F007168D293A320500914B9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					F0071694293A320500914B9E = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = F0071690293A320500914B9E /* Build configuration list for PBXProject "AlfaWallet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F007168C293A320500914B9E;
+			productRefGroup = F0071696293A320500914B9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0071694293A320500914B9E /* AlfaWallet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0071693293A320500914B9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00716A5293A320700914B9E /* LaunchScreen.storyboard in Resources */,
+				F00716A2293A320700914B9E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C55220A4962199ACF8937EC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlfaWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBE2B13AA76541C4A07D21D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaWallet/Pods-AlfaWallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaWallet/Pods-AlfaWallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaWallet/Pods-AlfaWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0071691293A320500914B9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F05677F6293CD5040085C428 /* CardDetailsViewModel.swift in Sources */,
+				F0943094293D0FCB00CCDD92 /* AddCardSceneDelegate.swift in Sources */,
+				F0944116293BC5B5002F12F0 /* Transparent.swift in Sources */,
+				F094307F293CE99B00CCDD92 /* UIImage+Transparent.swift in Sources */,
+				F05677F4293CD4EC0085C428 /* CardDetailsViewController.swift in Sources */,
+				F0943091293D058D00CCDD92 /* LocationManager.swift in Sources */,
+				F05677EF293CD0F90085C428 /* HiddenCardsSceneDelegate.swift in Sources */,
+				F094307C293CE24000CCDD92 /* UIImage+Barcode.swift in Sources */,
+				F0944109293A551A002F12F0 /* MainSceneDelegate.swift in Sources */,
+				F0943098293D14DD00CCDD92 /* CardsStorage.swift in Sources */,
+				F094410B293A6CEC002F12F0 /* MainAssembly.swift in Sources */,
+				F094309A293D14E900CCDD92 /* CardsStorageImpl.swift in Sources */,
+				F0943086293D02D800CCDD92 /* AddCardViewController.swift in Sources */,
+				F09440FD293A4E00002F12F0 /* MainViewModel.swift in Sources */,
+				F0944107293A54E2002F12F0 /* MainCoordinator.swift in Sources */,
+				F05677ED293CCFC30085C428 /* HiddenCardsAssembly.swift in Sources */,
+				F0944102293A51DA002F12F0 /* Card.swift in Sources */,
+				F05677E9293CCF6C0085C428 /* HiddenCardsViewController.swift in Sources */,
+				F0943081293CFE4600CCDD92 /* AlfaTextField.swift in Sources */,
+				F007169D293A320500914B9E /* MainViewController.swift in Sources */,
+				F0944110293BABAA002F12F0 /* CardCell.swift in Sources */,
+				F05677F8293CDADE0085C428 /* Updatable.swift in Sources */,
+				F05677EB293CCF7A0085C428 /* HiddenCardsViewModel.swift in Sources */,
+				F094308B293D04AC00CCDD92 /* NetworkUseCase.swift in Sources */,
+				F094308D293D04BB00CCDD92 /* NetworkUseCaseImpl.swift in Sources */,
+				F0071699293A320500914B9E /* AppDelegate.swift in Sources */,
+				F0943088293D02E400CCDD92 /* AddCardViewModel.swift in Sources */,
+				F094309C293E1A7F00CCDD92 /* ViewWillAppear+Rx.swift in Sources */,
+				F0944114293BC2C3002F12F0 /* UIColor+Hex.swift in Sources */,
+				F094307A293CE16B00CCDD92 /* CardView.swift in Sources */,
+				F0943084293D028A00CCDD92 /* AddCardAssembly.swift in Sources */,
+				F0944100293A4E5F002F12F0 /* ViewModel.swift in Sources */,
+				F0944112293BBB78002F12F0 /* CardsOverlappingLayout.swift in Sources */,
+				F094308F293D053A00CCDD92 /* Location.swift in Sources */,
+				F007169B293A320500914B9E /* SceneDelegate.swift in Sources */,
+				F05677F2293CD4C90085C428 /* CardDetailsAssembly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F00716A3293A320700914B9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F00716A4293A320700914B9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F00716A7293A320700914B9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F00716A8293A320700914B9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F00716AA293A320700914B9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B722F8B1C0B2B010C8F4A01 /* Pods-AlfaWallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4U2WRPNL2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlfaWallet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alfabank.AlfaWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F00716AB293A320700914B9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ADB9BA0DAEE2C24E3256755 /* Pods-AlfaWallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4U2WRPNL2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlfaWallet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alfabank.AlfaWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0071690293A320500914B9E /* Build configuration list for PBXProject "AlfaWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00716A7293A320700914B9E /* Debug */,
+				F00716A8293A320700914B9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00716A9293A320700914B9E /* Build configuration list for PBXNativeTarget "AlfaWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00716AA293A320700914B9E /* Debug */,
+				F00716AB293A320700914B9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F007168D293A320500914B9E /* Project object */;
+}
