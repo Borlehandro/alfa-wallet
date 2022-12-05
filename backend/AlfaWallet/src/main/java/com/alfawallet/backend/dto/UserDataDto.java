@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class UserDataDto {
     private String latitude;
     private String longitude;
-    private Long deviceId;
+    private String deviceId;
     private String timestamp;
 }

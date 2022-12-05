@@ -25,5 +25,6 @@ public class UserData {
 
     @OneToMany
     @JoinColumn(name = "owner_id")
+    @Getter
     private List<CardData> cards;
 }
