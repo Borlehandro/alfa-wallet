@@ -18,9 +18,12 @@ AlfaWallet это проект, написанная в рамках Мобил�
     Архитектура: MVVM + Coordinators с использованием RxSwift.
     Подключение библиотек: CocoaPods.
     Фреймворки: SnapKit, RxSwift, Moya.
-##### Флоу мобильного приложения
+
+### Флоу мобильного приложения
 <img src="https://github.com/Borlehandro/alfa-wallet/blob/master/recources/flow.png?raw=true" alt="Logo" align="center" width="1024"/>
 
+### Основные компоненты мобильного приложения
+<img src="https://github.com/Borlehandro/alfa-wallet/blob/master/recources/app_structure.png?raw=true" alt="Logo" align="center" width="1024"/>
 
 ## Документация 
 С документацией проекта можно ознакомиться по следующим ссылкам: 
