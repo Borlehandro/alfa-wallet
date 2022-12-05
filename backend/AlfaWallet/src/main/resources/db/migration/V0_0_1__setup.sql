@@ -2,8 +2,8 @@ CREATE SEQUENCE user_id_sequence START 1;
 
 CREATE TABLE user_info
 (
-    id        INTEGER NOT NULL PRIMARY KEY DEFAULT nextval('user_id_sequence'),
-    device_id VARCHAR(255) UNIQUE
+    id        INTEGER      NOT NULL PRIMARY KEY DEFAULT nextval('user_id_sequence'),
+    device_id VARCHAR(255) NOT NULL UNIQUE
 );
 
 -- Can be unused --
@@ -24,7 +24,7 @@ CREATE TABLE card
     name            VARCHAR(255)  NOT NULL,
     -- Can be long...
     code            VARCHAR(1024) NOT NULL,
-    hidden          BOOLEAN       NOT NULL DEFAULT FALSE,
+    hidden          BOOLEAN       NOT NULL             DEFAULT FALSE,
     owner_id        INTEGER       NOT NULL REFERENCES user_info,
     organisation_id INTEGER REFERENCES organisation
 );
