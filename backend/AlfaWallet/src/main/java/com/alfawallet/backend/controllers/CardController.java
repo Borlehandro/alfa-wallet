@@ -19,31 +19,31 @@ public class CardController {
 
     @Operation(summary = "Get all user cards sorted by geolocation")
     @PostMapping(value = "/all")
-    public List<CardInfoDto> cards(@RequestBody BaseRequestDto request) {
-        return cardService.getAllCards(request);
+    public CardsInfoResponse cards(@RequestBody BaseRequestDto request) {
+        return new CardsInfoResponse(cardService.getAllCards(request));
     }
 
     @Operation(summary = "Add new card")
-    @PostMapping
-    public List<CardInfoDto> addCard(@RequestBody AddCardRequestDto request) {
-        // TODO: Implement
-        return cardService.getAllCards(request.getBase());
+    @PostMapping(value = "/add")
+    public CardsInfoResponse addCard(@RequestBody AddCardRequestDto request) {
+        return new CardsInfoResponse(cardService.addCard(request.getBase(), request.getCard()));
     }
 
     @Operation(summary = "Delete card by id")
     @PostMapping(value = "/delete/{id}")
-    public List<CardInfoDto> deleteCard(
+    public CardsInfoResponse deleteCard(
             @RequestBody BaseRequestDto request,
             @PathVariable(name = "id") Integer cardId
     ) {
         // TODO: Implement
-        return cardService.getAllCards(request);
+        return new CardsInfoResponse(cardService.getAllCards(request));
     }
 
+    // Cards
     @Operation(summary = "Update current card")
-    @PutMapping
-    public List<CardInfoDto> updateCard(@RequestBody UpdateCardRequest request) {
+    @PostMapping(value = "/update")
+    public CardsInfoResponse updateCard(@RequestBody UpdateCardRequest request) {
         // TODO: Implement
-        return cardService.getAllCards(request.getBase());
+        return new CardsInfoResponse(cardService.getAllCards(request.getBase()));
     }
 }

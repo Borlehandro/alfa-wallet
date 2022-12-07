@@ -38,6 +38,6 @@ public class CardData {
     @Getter
     @Setter
     @ManyToOne(optional = false)
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "owner_id", nullable = false)
     private UserData owner;
 }

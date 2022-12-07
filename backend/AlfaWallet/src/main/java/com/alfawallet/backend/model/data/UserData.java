@@ -2,6 +2,7 @@ package com.alfawallet.backend.model.data;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -22,8 +23,7 @@ public class UserData {
     @Column(name = "device_id", nullable = false, unique = true)
     private String deviceId;
 
-    @OneToMany
-    @JoinColumn(name = "owner_id")
+    @OneToMany(mappedBy = "owner")
     @Getter
     private List<CardData> cards;
 }
