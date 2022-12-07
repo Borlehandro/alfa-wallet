@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDataDto {
-    private String latitude;
-    private String longitude;
-    private String deviceId;
-    private String timestamp;
+public class UpdateCardRequest {
+    CardInfoDto card;
+    BaseRequestDto base;
 }

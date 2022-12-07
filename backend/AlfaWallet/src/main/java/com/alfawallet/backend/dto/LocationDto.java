@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CardDto {
-    private String id;
-    private String name;
-    private String barcode;
-    private Boolean hidden;
+public class LocationDto {
+    private String latitude;
+    private String longitude;
 }

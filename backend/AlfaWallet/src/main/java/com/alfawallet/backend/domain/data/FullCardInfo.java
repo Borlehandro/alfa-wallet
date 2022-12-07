@@ -1,6 +1,6 @@
 package com.alfawallet.backend.domain.data;
 
-import com.alfawallet.backend.dto.CardDto;
+import com.alfawallet.backend.dto.CardInfoDto;
 import com.alfawallet.backend.yandex.dto.YandexApiFeatureDto;
 import lombok.Data;
 import lombok.NonNull;
@@ -12,5 +12,5 @@ public class FullCardInfo {
     YandexApiFeatureDto feature;
 
     @NonNull
-    CardDto card;
+    CardInfoDto card;
 }

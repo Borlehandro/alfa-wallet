@@ -1,8 +1,7 @@
 package com.alfawallet.backend.model.data;
-
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.List;
 
 @Entity

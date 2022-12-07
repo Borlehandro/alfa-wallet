@@ -1,7 +1,8 @@
 package com.alfawallet.backend.model.data;
 
-import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "card")
