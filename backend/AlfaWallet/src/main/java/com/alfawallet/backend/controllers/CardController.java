@@ -36,7 +36,6 @@ public class CardController {
         return new CardsInfoResponse(cardService.deleteCard(request, cardId));
     }
 
-    // Cards
     @Operation(summary = "Update current card")
     @PostMapping(value = "/update")
     public CardsInfoResponse updateCard(@RequestBody UpdateCardRequest request) {
