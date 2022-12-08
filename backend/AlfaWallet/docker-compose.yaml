@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  backend-app:
+    image: backend:latest
+    container_name: backend-app
+    restart: always
+    ports:
+      - 0.0.0.0:8080:8080/tcp
+    networks:
+      - alfawallet-network
+    environment:
+      - TZ
+      - DATASOURCE_URL
+      - DATASOURCE_USERNAME
+      - DATASOURCE_PASSWORD
+      - SHOW_HIBERNATE_LOGS
+
+
+networks:
+  alfawallet-network:
+    driver: bridge
+    external: true
