@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Card: Decodable {
+public struct Card: Codable {
     let id: Int
     var name: String
     var barcode: String

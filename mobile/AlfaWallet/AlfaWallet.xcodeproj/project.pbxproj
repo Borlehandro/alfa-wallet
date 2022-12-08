@@ -13,6 +13,7 @@
 		F007169D293A320500914B9E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007169C293A320500914B9E /* MainViewController.swift */; };
 		F00716A2293A320700914B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00716A1293A320700914B9E /* Assets.xcassets */; };
 		F00716A5293A320700914B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00716A3293A320700914B9E /* LaunchScreen.storyboard */; };
+		F01AE56C29410030007A79AF /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AE56B29410030007A79AF /* Requests.swift */; };
 		F05677E9293CCF6C0085C428 /* HiddenCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677E8293CCF6B0085C428 /* HiddenCardsViewController.swift */; };
 		F05677EB293CCF7A0085C428 /* HiddenCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677EA293CCF7A0085C428 /* HiddenCardsViewModel.swift */; };
 		F05677ED293CCFC30085C428 /* HiddenCardsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05677EC293CCFC30085C428 /* HiddenCardsAssembly.swift */; };
@@ -30,7 +31,6 @@
 		F0943088293D02E400CCDD92 /* AddCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943087293D02E400CCDD92 /* AddCardViewModel.swift */; };
 		F094308B293D04AC00CCDD92 /* NetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094308A293D04AC00CCDD92 /* NetworkUseCase.swift */; };
 		F094308D293D04BB00CCDD92 /* NetworkUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094308C293D04BB00CCDD92 /* NetworkUseCaseImpl.swift */; };
-		F094308F293D053A00CCDD92 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094308E293D053A00CCDD92 /* Location.swift */; };
 		F0943091293D058D00CCDD92 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943090293D058D00CCDD92 /* LocationManager.swift */; };
 		F0943094293D0FCB00CCDD92 /* AddCardSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943093293D0FCB00CCDD92 /* AddCardSceneDelegate.swift */; };
 		F0943098293D14DD00CCDD92 /* CardsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0943097293D14DD00CCDD92 /* CardsStorage.swift */; };
@@ -46,6 +46,9 @@
 		F0944112293BBB78002F12F0 /* CardsOverlappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944111293BBB78002F12F0 /* CardsOverlappingLayout.swift */; };
 		F0944114293BC2C3002F12F0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944113293BC2C2002F12F0 /* UIColor+Hex.swift */; };
 		F0944116293BC5B5002F12F0 /* Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0944115293BC5B5002F12F0 /* Transparent.swift */; };
+		F0DE25E92940DF4A00FC8757 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE25E82940DF4A00FC8757 /* NetworkManager.swift */; };
+		F0DE25EC2940DF6500FC8757 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE25EB2940DF6500FC8757 /* API.swift */; };
+		F0DE25EE2940E1AE00FC8757 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE25ED2940E1AE00FC8757 /* Responses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,7 @@
 		F00716A1293A320700914B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F00716A4293A320700914B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F00716A6293A320700914B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F01AE56B29410030007A79AF /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		F05677E8293CCF6B0085C428 /* HiddenCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardsViewController.swift; sourceTree = "<group>"; };
 		F05677EA293CCF7A0085C428 /* HiddenCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardsViewModel.swift; sourceTree = "<group>"; };
 		F05677EC293CCFC30085C428 /* HiddenCardsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCardsAssembly.swift; sourceTree = "<group>"; };
@@ -76,7 +80,6 @@
 		F0943087293D02E400CCDD92 /* AddCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewModel.swift; sourceTree = "<group>"; };
 		F094308A293D04AC00CCDD92 /* NetworkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUseCase.swift; sourceTree = "<group>"; };
 		F094308C293D04BB00CCDD92 /* NetworkUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUseCaseImpl.swift; sourceTree = "<group>"; };
-		F094308E293D053A00CCDD92 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F0943090293D058D00CCDD92 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F0943093293D0FCB00CCDD92 /* AddCardSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSceneDelegate.swift; sourceTree = "<group>"; };
 		F0943097293D14DD00CCDD92 /* CardsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStorage.swift; sourceTree = "<group>"; };
@@ -92,6 +95,9 @@
 		F0944111293BBB78002F12F0 /* CardsOverlappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsOverlappingLayout.swift; sourceTree = "<group>"; };
 		F0944113293BC2C2002F12F0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		F0944115293BC5B5002F12F0 /* Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transparent.swift; sourceTree = "<group>"; };
+		F0DE25E82940DF4A00FC8757 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F0DE25EB2940DF6500FC8757 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F0DE25ED2940E1AE00FC8757 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +152,7 @@
 				F0944105293A527A002F12F0 /* Models */,
 				F094410E293B8AC7002F12F0 /* Extensions */,
 				F05677F9293CDAE80085C428 /* Wrappers */,
-				F0943092293D059100CCDD92 /* Location */,
+				F0943092293D059100CCDD92 /* Managers */,
 				F0943095293D14A800CCDD92 /* UseCases */,
 				F0943096293D14CA00CCDD92 /* CardsStorage */,
 				F00716A3293A320700914B9E /* LaunchScreen.storyboard */,
@@ -217,12 +223,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		F0943092293D059100CCDD92 /* Location */ = {
+		F0943092293D059100CCDD92 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				F0943090293D058D00CCDD92 /* LocationManager.swift */,
+				F0DE25EA2940DF5800FC8757 /* NetworkManager */,
 			);
-			path = Location;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		F0943095293D14A800CCDD92 /* UseCases */ = {
@@ -258,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				F0944101293A51DA002F12F0 /* Card.swift */,
-				F094308E293D053A00CCDD92 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +278,17 @@
 				F094309B293E1A7E00CCDD92 /* ViewWillAppear+Rx.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F0DE25EA2940DF5800FC8757 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE25E82940DF4A00FC8757 /* NetworkManager.swift */,
+				F0DE25EB2940DF6500FC8757 /* API.swift */,
+				F0DE25ED2940E1AE00FC8757 /* Responses.swift */,
+				F01AE56B29410030007A79AF /* Requests.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		F68DD3FE6AE1055AFCB7CA95 /* Pods */ = {
@@ -414,8 +431,12 @@
 				F0944107293A54E2002F12F0 /* MainCoordinator.swift in Sources */,
 				F05677ED293CCFC30085C428 /* HiddenCardsAssembly.swift in Sources */,
 				F0944102293A51DA002F12F0 /* Card.swift in Sources */,
+				F01AE56C29410030007A79AF /* Requests.swift in Sources */,
 				F05677E9293CCF6C0085C428 /* HiddenCardsViewController.swift in Sources */,
 				F0943081293CFE4600CCDD92 /* AlfaTextField.swift in Sources */,
+				F0DE25E92940DF4A00FC8757 /* NetworkManager.swift in Sources */,
+				F0DE25EC2940DF6500FC8757 /* API.swift in Sources */,
+				F0DE25EE2940E1AE00FC8757 /* Responses.swift in Sources */,
 				F007169D293A320500914B9E /* MainViewController.swift in Sources */,
 				F0944110293BABAA002F12F0 /* CardCell.swift in Sources */,
 				F05677F8293CDADE0085C428 /* Updatable.swift in Sources */,
@@ -430,7 +451,6 @@
 				F0943084293D028A00CCDD92 /* AddCardAssembly.swift in Sources */,
 				F0944100293A4E5F002F12F0 /* ViewModel.swift in Sources */,
 				F0944112293BBB78002F12F0 /* CardsOverlappingLayout.swift in Sources */,
-				F094308F293D053A00CCDD92 /* Location.swift in Sources */,
 				F007169B293A320500914B9E /* SceneDelegate.swift in Sources */,
 				F05677F2293CD4C90085C428 /* CardDetailsAssembly.swift in Sources */,
 			);

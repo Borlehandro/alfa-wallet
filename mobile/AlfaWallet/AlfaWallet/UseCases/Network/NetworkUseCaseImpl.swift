@@ -9,6 +9,8 @@ import Foundation
 
 public final class NetworkUseCaseImpl: NetworkUseCase {
 
+    let network = NetworkManager()
+
     var mockCards: [Card] = [
         Card(id: 1, name: "Lenta", barcode: "12345678", isHidden: true),
         Card(id: 2, name: "Магнит", barcode: "12345678", isHidden: false),
@@ -19,15 +21,43 @@ public final class NetworkUseCaseImpl: NetworkUseCase {
     ]
 
     public func addCard(name: String, barcode: String) -> [Card] {
-        print("[⌘ NETWORK] add \(name)")
+        var cards: [Card] = []
+        let newCard: Card = .init(
+            id: -1,
+            name: name,
+            barcode: barcode,
+            isHidden: false
+        )
 
-        return mockCards
+        network.addCard(
+            card: newCard,
+            completion: { result in
+                switch result {
+                case .success(let response):
+                    cards = response.cards
+                case .failure(let error):
+                    print(error)
+                }
+            })
+
+        return cards
     }
 
     public func deleteCard(id: Int)  -> [Card] {
-        print("[⌘ NETWORK] delete with ID: \(id)")
+        var cards: [Card] = []
 
-        return mockCards
+        network.deleteCard(
+            cardID: id,
+            completion: { result in
+                switch result {
+                case .success(let response):
+                    cards = response.cards
+                case .failure(let error):
+                    print(error)
+                }
+            })
+
+        return cards
     }
 
     public func updateCard(card: Card) -> [Card] {
@@ -41,9 +71,17 @@ public final class NetworkUseCaseImpl: NetworkUseCase {
     }
 
     public func fetchCards() -> [Card] {
-        let currentLocation = Location()
-        print("[⌘ NETWORK] long: \(currentLocation.longitude), lat: \(currentLocation.latitude)")
+        var cards: [Card] = []
 
-        return mockCards
+        network.fetchCardsList { result in
+            switch result {
+            case .success(let response):
+                cards = response.cards
+            case .failure(let error):
+               print(error)
+            }
+        }
+
+        return cards
     }
 }
