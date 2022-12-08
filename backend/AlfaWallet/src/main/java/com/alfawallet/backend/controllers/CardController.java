@@ -5,8 +5,6 @@ import com.alfawallet.backend.dto.*;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/cards")
 public class CardController {
@@ -35,15 +33,13 @@ public class CardController {
             @RequestBody BaseRequestDto request,
             @PathVariable(name = "id") Integer cardId
     ) {
-        // TODO: Implement
-        return new CardsInfoResponse(cardService.getAllCards(request));
+        return new CardsInfoResponse(cardService.deleteCard(request, cardId));
     }
 
     // Cards
     @Operation(summary = "Update current card")
     @PostMapping(value = "/update")
     public CardsInfoResponse updateCard(@RequestBody UpdateCardRequest request) {
-        // TODO: Implement
-        return new CardsInfoResponse(cardService.getAllCards(request.getBase()));
+        return new CardsInfoResponse(cardService.updateCard(request.getBase(), request.getCard()));
     }
 }

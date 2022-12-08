@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserData, Long> {
+public interface UserRepository extends JpaRepository<UserData, Integer> {
 
     Optional<UserData> getByDeviceId(String deviceId);
 }

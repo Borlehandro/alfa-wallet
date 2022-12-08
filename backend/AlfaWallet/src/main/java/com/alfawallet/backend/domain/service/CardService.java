@@ -131,6 +131,52 @@ public class CardService {
         }
     }
 
+    @Transactional
+    public List<CardInfoDto> deleteCard(BaseRequestDto base, Integer cardToDeleteId) {
+        var cardOpt = cardRepository.findById(cardToDeleteId);
+        if (cardOpt.isEmpty()) {
+            throw new IllegalArgumentException("Incorrect id:" + cardToDeleteId);
+        }
+        var card = cardOpt.get();
+        var userOpt = userRepository.getByDeviceId(base.getDeviceId());
+        if (userOpt.isEmpty()) {
+            throw new IllegalArgumentException("User with id " + base.getDeviceId() + " does not exist.");
+        }
+        var user = userOpt.get();
+        if (!card.getOwner().getId().equals(user.getId())) {
+            throw new IllegalArgumentException("Incorrect id:" + cardToDeleteId);
+        }
+        cardRepository.delete(card);
+        user.getCards().remove(card);
+        userRepository.save(user);
+        return getAllCards(base);
+    }
+
+    @Transactional
+    public List<CardInfoDto> updateCard(BaseRequestDto base, CardInfoDto updatedCard) {
+        var cardOpt = cardRepository.findById(Integer.valueOf(updatedCard.getId()));
+        if (cardOpt.isEmpty()) {
+            throw new IllegalArgumentException("Incorrect id:" + updatedCard.getId());
+        }
+        var card = cardOpt.get();
+        var userOpt = userRepository.getByDeviceId(base.getDeviceId());
+        if (userOpt.isEmpty()) {
+            throw new IllegalArgumentException("User with id " + base.getDeviceId() + " does not exist.");
+        }
+        var user = userOpt.get();
+        if (!card.getOwner().getId().equals(user.getId())) {
+            throw new IllegalArgumentException("Incorrect id:" + updatedCard.getId());
+        }
+        var cardIndex = user.getCards().indexOf(card);
+        card.setName(updatedCard.getName());
+        card.setHidden(updatedCard.getHidden());
+        card.setCode(updatedCard.getBarcode());
+        cardRepository.save(card);
+        user.getCards().set(cardIndex, card);
+        userRepository.save(user);
+        return getAllCards(base);
+    }
+
     private static Double distanceSquare(
             Double startLatitude,
             Double startLongitude,
