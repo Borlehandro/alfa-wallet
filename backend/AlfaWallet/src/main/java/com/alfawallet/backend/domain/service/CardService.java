@@ -40,7 +40,7 @@ public class CardService {
         var longitude = base.getLocation().getLongitude();
         var userOpt = userRepository.getByDeviceId(base.getDeviceId());
         if (userOpt.isEmpty()) {
-            userRepository.save(new UserData(base.getDeviceId()));
+            userRepository.save(new UserData(base.getDeviceId(), new ArrayList<>()));
             return List.of();
         } else {
             var user = userOpt.get();
@@ -109,7 +109,7 @@ public class CardService {
         var userOpt = userRepository.getByDeviceId(base.getDeviceId());
         UserData user;
         if (userOpt.isEmpty()) {
-            user = userRepository.save(new UserData(base.getDeviceId()));
+            user = userRepository.save(new UserData(base.getDeviceId(), new ArrayList<>()));
         } else {
             user = userOpt.get();
         }

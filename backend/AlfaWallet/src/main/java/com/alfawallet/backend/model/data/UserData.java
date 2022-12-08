@@ -25,5 +25,6 @@ public class UserData {
 
     @OneToMany(mappedBy = "owner")
     @Getter
+    @NonNull
     private List<CardData> cards;
 }
