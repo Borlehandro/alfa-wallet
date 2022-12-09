@@ -21,7 +21,7 @@ public class YandexApiManager {
                         .queryParam("lang", "ru_RU")
                         .queryParam("type", "biz")
                         .queryParam("ll", longitude + "," + latitude)
-                        .queryParam("spn", "0.003000,0.003000")
+                        .queryParam("spn", "0.004500,0.004500")
                         .queryParam("rspn", 1)
                         .build()
                 )

@@ -17,8 +17,8 @@ public class CardController {
 
     @Operation(summary = "Get all user cards sorted by geolocation")
     @PostMapping(value = "/all")
-    public CardsInfoResponse cards(@RequestBody BaseRequestDto request) {
-        return new CardsInfoResponse(cardService.getAllCards(request));
+    public CardsInfoResponse cards(@RequestBody BaseOnlyRequest request) {
+        return new CardsInfoResponse(cardService.getAllCards(request.getBase()));
     }
 
     @Operation(summary = "Add new card")
@@ -30,10 +30,10 @@ public class CardController {
     @Operation(summary = "Delete card by id")
     @PostMapping(value = "/delete/{id}")
     public CardsInfoResponse deleteCard(
-            @RequestBody BaseRequestDto request,
+            @RequestBody BaseOnlyRequest request,
             @PathVariable(name = "id") Integer cardId
     ) {
-        return new CardsInfoResponse(cardService.deleteCard(request, cardId));
+        return new CardsInfoResponse(cardService.deleteCard(request.getBase(), cardId));
     }
 
     @Operation(summary = "Update current card")

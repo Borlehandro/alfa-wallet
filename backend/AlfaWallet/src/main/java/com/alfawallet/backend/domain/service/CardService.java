@@ -47,18 +47,19 @@ public class CardService {
             List<FullCardInfo> cardsFullInfo = new ArrayList<>();
             var allCards = user.getCards();
             allCards.forEach((card) -> {
-                var nearestFeature = yandexApiManager.searchByLocationAndCardName(
+                var allFeatures = yandexApiManager.searchByLocationAndCardName(
                         card.getName(),
                         latitude,
                         longitude
-                ).getFeatures().stream().min(
+                ).getFeatures();
+                var nearestFeature = allFeatures.stream().min(
                         Comparator.comparingDouble(
                                 (item) ->
                                         distanceSquare(
                                                 Double.valueOf(latitude),
-                                                Double.valueOf(item.getGeometry().getCoordinates().get(0)),
+                                                Double.valueOf(item.getGeometry().getCoordinates().get(1)),
                                                 Double.valueOf(longitude),
-                                                Double.valueOf(item.getGeometry().getCoordinates().get(1))
+                                                Double.valueOf(item.getGeometry().getCoordinates().get(0))
                                         )
                         )
 
@@ -67,7 +68,7 @@ public class CardService {
                 // Add very far fake feature
                 featureToAdd = nearestFeature.orElseGet(() -> new YandexApiFeatureDto(
                         new YandexApiGeometryDto(
-                                List.of("1000", "1000")
+                                List.of("0.0", "0.0")
                         ),
                         new YandexApiFeaturePropertiesDto(
                                 new YandexApiCompanyMetadataDto(
@@ -93,9 +94,9 @@ public class CardService {
                                     (item) ->
                                             distanceSquare(
                                                     Double.valueOf(latitude),
-                                                    Double.valueOf(item.getFeature().getGeometry().getCoordinates().get(0)),
+                                                    Double.valueOf(item.getFeature().getGeometry().getCoordinates().get(1)),
                                                     Double.valueOf(longitude),
-                                                    Double.valueOf(item.getFeature().getGeometry().getCoordinates().get(1))
+                                                    Double.valueOf(item.getFeature().getGeometry().getCoordinates().get(0))
                                             )
                             )
                     )
@@ -179,8 +180,8 @@ public class CardService {
 
     private static Double distanceSquare(
             Double startLatitude,
-            Double startLongitude,
             Double endLatitude,
+            Double startLongitude,
             Double endLongitude
     ) {
         return Math.pow(startLatitude - endLatitude, 2) + Math.pow(startLongitude - endLongitude, 2);
